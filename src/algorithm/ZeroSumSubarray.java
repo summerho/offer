@@ -15,7 +15,7 @@ package algorithm;
  */
 public class ZeroSumSubarray {
 
-    public static void zeroSumSubarray(int arr[]) {
+    public static void zeroSumSubarray(int[] arr) {
         int len = arr.length;
         for (int i = 0; i < len; i++) {
             int sum = 0;
