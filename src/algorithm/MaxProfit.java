@@ -26,6 +26,11 @@ package algorithm;
  */
 public class MaxProfit {
 
+    /**
+     * 一次循环搞定
+     * @param prices
+     * @return
+     */
     private static int maxProfit(int[] prices) {
         if (prices.length == 0) {
             return 0;
@@ -40,6 +45,22 @@ public class MaxProfit {
             }
         }
         return maxProfit;
+    }
+
+    /**
+     * 暴力法，两次循环
+     * @param prices
+     * @return
+     */
+    private static int maxProfit1(int[] prices) {
+         int max = 0;
+         int n = prices.length;
+         for (int i = 0; i < n - 1; i++) {
+             for (int j = i + 1; j < n; j++) {
+                 max = Math.max(max, prices[j] - prices[i]);
+             }
+         }
+         return max;
     }
 
     public static void main(String[] args) {
